@@ -16,6 +16,8 @@ class Rubik():
     def reset(self):
         self.orientation = np.zeros(20, dtype=int)
         self.permutation = np.arange(20)
+        self.position = dict(orientation=self.orientation,
+                             permutation=self.permutation)
 
     def apply_scramble(self, scramble):
         self.scramble = scramble
